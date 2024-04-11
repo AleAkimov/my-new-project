@@ -16,8 +16,8 @@ public class Main {
             //System.out.println("Введено недопустимое значение");
             throw new IOException("формат математической операции не удовлетворяет заданию - два операнда и один оператор");
         }
-        int space = Word.lastIndexOf(" ");
-        if (space != -1) {
+        char last = Word.charAt(Word.length() - 1);
+        if(" ".equals(String.valueOf(last))) {
             throw new IOException("формат математической операции не удовлетворяет заданию - два операнда и один оператор");
         }
         String Word2 = Word.replace(" ", ""); // Word2 содержит введеную строку без пробелов
