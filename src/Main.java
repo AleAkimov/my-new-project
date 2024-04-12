@@ -101,7 +101,9 @@ public class Main {
             throw new IOException("используются одновременно разные системы счисления");
         }
 
-
+        if (oo1>10 || oo2>10){
+            throw new IOException ("Значения не удовлетворяют заданию - вводимые значения не должны превышать 10 или X");
+        }
         assert oper != null;
         if (oo2==0 & oper.equals("/")) {
             throw new IOException("деление на ноль невозможно");
